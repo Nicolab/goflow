@@ -99,8 +99,10 @@ If you need to keep your _Go Flow_ up to date with the recent changes made to _G
 you can always fetch and merge them from this repo back into your own project:
 
 ```sh
-git pull -s subtree goflow master
+git pull -s subtree goflow master --allow-unrelated-histories
 ```
+
+> `--allow-unrelated-histories` prevent that Git _refusing to merge unrelated histories_.
 
 ### Update the remote tracking
 
@@ -110,14 +112,8 @@ If you want to add or to update a remote branch to track:
 git remote add -t master goflow git@github:Nicolab/goflow.git
 ```
 
-> ```sh git remote add -t remote-branch remote-name remote-url```  
+> ```git remote add -t remote-branch remote-name remote-url```  
 You can use multiple "-t branch" options to grab multiple branches.
-
-If git _refusing to merge unrelated histories_:
-
-```sh
-git pull -s subtree goflow --allow-unrelated-histories
-```
 
 
 ## How to uninstall
