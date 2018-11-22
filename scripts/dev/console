@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if test -f ./goflow/conf/dev/docker.sh ; then
+  . ./goflow/conf/dev/docker.sh
+fi
+
+dirPath=$(dirname $(readlink -f $0))
+# memo: isRunning=`docker container inspect $dev_container_name -f "{{.State.Running}}"`
+running=`docker ps|grep "$dev_container_name"`
+
+echo $'\n'
+
+if [ -z "$running" ]
+then
+  echo "Starting $dev_container_name container..."$'\n'
+  /bin/bash "$dirPath/docker-run-bash"
+else
+  echo "$dev_container_name container..."$'\n'
+  echo $running $'\n'
+  /bin/bash "$dirPath/docker-exec-bash"
+fi

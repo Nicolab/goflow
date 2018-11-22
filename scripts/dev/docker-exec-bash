@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# exec from host
+
+if test -f ./goflow/conf/dev/docker.sh ; then
+  . ./goflow/conf/dev/docker.sh
+fi
+
+docker exec -it $dev_container_name /bin/bash

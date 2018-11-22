@@ -1,0 +1,5 @@
+{
+  "go.gopath": "${env:GOPATH}:${workspaceFolder}/goflow/build/dev/.go",
+  "go.inferGopath": false,
+  "go.buildOnSave": "off"
+}

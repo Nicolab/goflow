@@ -1,0 +1,22 @@
+
+# See http://editorconfig.org
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.{editorconfig,go,mod,sum,md,html,txt,js,py,json,cson,yml,conf,dockerignore,env,gitignore,babelrc}]
+charset = utf-8
+
+# 4 space indentation
+[*.py]
+indent_style = space
+indent_size = 4
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
+charset = utf-8

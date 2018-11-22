@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if test -f ./goflow/conf/dev/docker.sh ; then
+  . ./goflow/conf/dev/docker.sh
+fi
+
+docker build -t $dev_goflow_image $dev_goflow_image_path

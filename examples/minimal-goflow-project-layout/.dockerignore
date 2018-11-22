@@ -1,0 +1,37 @@
+#
+# Generic
+#
+
+.md
+.txt
+.git
+._*
+*.log
+
+# OS
+
+.DS_Store
+.DS_Store?
+*[Tt]humbs.db
+.Spotlight-V100
+.Trashes
+.Trash-1000/
+*.Trashes
+
+
+#
+# Conventional
+#
+
+.github
+.circleci
+.idea/
+.vscode/
+.tmp/
+
+goflow/
+build/
+docs/
+examples/
+githooks/
+local/

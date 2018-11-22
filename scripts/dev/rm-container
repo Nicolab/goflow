@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# exec from host
+
+if test -f ./goflow/conf/dev/docker.sh ; then
+  . ./goflow/conf/dev/docker.sh
+fi
+
+docker stop $dev_container_name
+docker rm $dev_container_name

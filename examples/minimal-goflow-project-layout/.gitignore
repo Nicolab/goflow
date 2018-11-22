@@ -1,0 +1,36 @@
+#
+# Generic
+#
+
+# OS
+.DS_Store
+.DS_Store?
+*[Tt]humbs.db
+.Spotlight-V100
+.Trashes
+.Trash-1000/
+*.Trashes
+
+# Packages
+bower_components/
+node_modules/
+vendor/
+build/*/.go
+*/build/*/.go
+
+#
+# Conventional
+#
+
+._*
+*.log
+.idea/
+.vscode/
+.tmp/
+
+# Delve
+debug
+main
+
+local/
+public/
