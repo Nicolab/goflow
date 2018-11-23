@@ -59,6 +59,10 @@ Happy Coding in the Go flow ;)
 
 ## Usage
 
+### Config
+
+See the [config files](goflow/conf/dev).
+
 ### Host
 
 Run/exec the _goflow-dev_ container:
@@ -74,6 +78,12 @@ Stop and remove _goflow-dev_ container:
 ```
 
 ### Container
+
+Execute the _Go_ program (`go run` by default):
+
+```sh
+./goflow/scripts/dev/exec
+```
 
 Run the _Go_ program and watch the code change (for reloading):
 
