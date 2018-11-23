@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if test -f ./goflow/conf/dev/watcher.sh ; then
+  . ./goflow/conf/dev/watcher.sh
+fi
+
+# exec from container
+dev_exec
