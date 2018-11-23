@@ -5,7 +5,7 @@ dev_entrypoint="./main.go"
 
 # execute the entrypoint
 dev_exec() {
-  printf "\nExec $dev_entrypoint \n\n"
+  printf "\n -> $dev_entrypoint \n\n"
   go run $dev_entrypoint
 }
 
