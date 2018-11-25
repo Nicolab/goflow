@@ -144,6 +144,21 @@ git remote rm goflow
 > Note: `git remote rm` does not delete the remote repository from the server. It simply removes the remote and its references from your local repository.
 
 
+## Tips
+
+### .bashrc
+
+To customize the `.bashrc` file, you can mount the `.bashrc` file in volume via `./goflow/conf/dev/docker.sh` file.
+
+Example:
+
+```sh
+-v "${PWD}"/goflow/build/dev/files/.bashrc:/home/gopher/.bashrc \
+```
+
+> You can mount as many files and folders as you want. It's a simple Docker command that you can customize at will!
+
+
 ## Troubleshooting
 
 ### Max user files watches

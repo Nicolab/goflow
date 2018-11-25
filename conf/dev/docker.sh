@@ -30,4 +30,6 @@ dev_docker_run() {
 
   # NOTE: work around for Delve:
   # --security-opt="seccomp:unconfined" --cap-add=SYS_PTRACE -p 2345:2345
+
+  # NOTE: -v "${PWD}"/goflow/build/dev/files/.bashrc:/home/gopher/.bashrc \
 }
