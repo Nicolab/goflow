@@ -17,6 +17,8 @@ node_modules/
 vendor/
 build/*/.go
 */build/*/.go
+!build/*/.go/README.md
+!*/build/*/.go/README.md
 
 #
 # Conventional
