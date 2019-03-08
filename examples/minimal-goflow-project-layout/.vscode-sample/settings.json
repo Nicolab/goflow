@@ -1,5 +1,6 @@
 {
-  "go.gopath": "${env:GOPATH}:${workspaceFolder}/goflow/build/dev/.go",
+  // `Go: Tools Gopath` (go.toolsGopath) value should be `${env:GOPATH}`
+  "go.gopath": "${workspaceFolder}/goflow/build/dev/.go",
   "go.inferGopath": false,
   "go.buildOnSave": "off"
 }
