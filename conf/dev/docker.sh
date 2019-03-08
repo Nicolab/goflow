@@ -15,7 +15,7 @@ dev_container_name="app-go-dev"
 # Install inside the dev container
 dev_install_container_stack() {
   go get github.com/cespare/reflex;
-  go get github.com/derekparker/delve/cmd/dlv;
+  go get github.com/go-delve/delve/cmd/dlv;
   # go get github.com/divan/expvarmon;
 }
 
