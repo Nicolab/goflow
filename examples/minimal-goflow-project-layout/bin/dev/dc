@@ -1,3 +1,1 @@
-#!/bin/bash
-
-docker-compose -f ./goflow/build/dev/docker-compose.yml $@
+/bin/bash ./goflow/scripts/dev/dc

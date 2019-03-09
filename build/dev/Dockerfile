@@ -14,7 +14,7 @@ ARG uid=1000
 ARG user=gopher
 ARG GO111MODULE=on
 
-# Time
+# time
 ARG TZ=Europe/Paris
 ARG LANG=fr_FR.UTF-8
 ARG LANGUAGE=fr_FR:fr
@@ -22,7 +22,7 @@ ARG LC_ALL=fr_FR.UTF-8
 
 ENV GO111MODULE=$GO111MODULE
 
-# TimeZone and locales
+# timezone and locales
 ENV TZ=$TZ
 ENV LANG $LANG
 ENV LANGUAGE $LANGUAGE
@@ -46,7 +46,7 @@ RUN echo $TZ | tee /etc/timezone \
   && apt-get clean
 
 
-# Configure the locales
+# configure the locales
 # TODO use env $variables
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     sed -i -e 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen && \
@@ -56,5 +56,14 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 
 RUN useradd -c 'App user' -m $user -o -u $uid && chown -R $user:$user /go
 
+# configure ssh client
+RUN mkdir /home/${user}/.ssh
+COPY ./files/.ssh/config /home/$user/.ssh/config
+
+# configure git
+COPY ./files/.gitconfig /home/$user/.gitconfig
+
+# ensure permissions
+RUN chown $user:$user -R /home/$user/
 USER $user
 WORKDIR /home/go

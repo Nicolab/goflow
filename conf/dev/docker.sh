@@ -25,11 +25,18 @@ dev_docker_run() {
   docker run --rm --name $dev_container_name \
     -v "${PWD}"/:/home/go \
     -v "${PWD}/goflow/build/dev/.go":/go \
+    -v "${PWD}"/goflow/build/dev/files/.bashrc:/home/gopher/.bashrc \
+    -v "${PWD}"/goflow/build/dev/files/.gitconfig:/home/gopher/.gitconfig \
+    -v "${PWD}"/goflow/build/dev/files/.ssh/config:/home/gopher/.ssh/config \
     --security-opt="seccomp:unconfined" --cap-add=SYS_PTRACE -p 2345:2345 \
     -it $dev_goflow_image /bin/bash
 
   # NOTE: work around for Delve:
   # --security-opt="seccomp:unconfined" --cap-add=SYS_PTRACE -p 2345:2345
 
-  # NOTE: -v "${PWD}"/goflow/build/dev/files/.bashrc:/home/gopher/.bashrc \
+  # NOTE: useful volumes:
+  # -v "${PWD}"/goflow/build/dev/files/.bashrc:/home/gopher/.bashrc \
+  # -v "${PWD}"/goflow/build/dev/files/.gitconfig:/home/gopher/.gitconfig \
+  # -v "${PWD}"/goflow/build/dev/files/.ssh/config:/home/gopher/.ssh/config \
+  # -v "${HOME}"/.ssh/id_rsa_git:/home/gopher/.ssh/id_rsa_git \
 }

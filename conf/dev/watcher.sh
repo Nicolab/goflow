@@ -11,11 +11,19 @@ dev_exec() {
 
 # simple watch
 dev_watch() {
-  dev_exec && reflex -g '**/*.go' -- dev_exec
+  printf "\n -> $dev_entrypoint \n\n"
+  reflex --start-service \
+  -R '^local' \
+  -R '^goflow' \
+  -R '^docs' \
+  -R '^examples' \
+  -r '\.go$' \
+  -- go run $dev_entrypoint
 }
 
 # watch with Delve (Go debugger)
 dev_watch_debug() {
-  reflex --start-service -g '**/*.go' -- sh -c \
+  dev_watch \
+  -- sh -c \
   "dlv debug $dev_entrypoint --headless=true --listen=0.0.0.0:2345 --api-version=2"
 }
