@@ -33,7 +33,7 @@ Example with `git subrepo` in an existing Git repository:
 
 ```sh
 # get the goflow subrepo
-git subrepo clone git@github.com:Nicolab/goflow.git
+git subrepo clone https://github.com/Nicolab/goflow.git
 ```
 
 After downloading the goflow directory, edit the config file: _./goflow/conf/dev/docker.sh_ (mainly: `dev_container_name`).
