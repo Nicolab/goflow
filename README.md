@@ -51,7 +51,11 @@ Then, always from your project directory:
 Now, from the container:
 
 ```sh
-./goflow/scripts/dev/install-container-stack
+cd /home
+# install dev tools globally in the container
+./go/goflow/scripts/dev/install-container-stack
+cd /home/go
+# the app uses Go mod
 ./goflow/scripts/dev/watch # or ./goflow/scripts/dev/watch-debug
 ```
 

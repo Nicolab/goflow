@@ -2,8 +2,8 @@
 
 # exec from container
 
-if test -f ./goflow/conf/dev/docker.sh ; then
-  . ./goflow/conf/dev/docker.sh
+if test -f /home/go/goflow/conf/dev/docker.sh ; then
+  . /home/go/goflow/conf/dev/docker.sh
 fi
 
 printf "Installing the dev stack...\n\n"
