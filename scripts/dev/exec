@@ -5,4 +5,4 @@ if test -f ./goflow/conf/dev/watcher.sh ; then
 fi
 
 # exec from container
-dev_exec
+dev_exec "$@"

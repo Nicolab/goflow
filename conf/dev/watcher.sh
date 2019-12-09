@@ -6,7 +6,7 @@ dev_entrypoint="./main.go"
 # execute the entrypoint
 dev_exec() {
   printf "\n -> $dev_entrypoint \n\n"
-  go run $dev_entrypoint
+  go run $dev_entrypoint "$@"
 }
 
 # simple watch
@@ -18,7 +18,7 @@ dev_watch() {
   -R '^docs' \
   -R '^examples' \
   -r '\.go$' \
-  -- go run $dev_entrypoint
+  -- go run $dev_entrypoint "$@"
 }
 
 # watch with Delve (Go debugger)

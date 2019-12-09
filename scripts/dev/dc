@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose -f ./goflow/build/dev/docker-compose.yml $@
+docker-compose -f ./goflow/build/dev/docker-compose.yml "$@"

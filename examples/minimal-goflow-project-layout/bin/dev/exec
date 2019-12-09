@@ -1,1 +1,1 @@
-/bin/bash ./goflow/scripts/dev/exec
+/bin/bash ./goflow/scripts/dev/exec "$@"

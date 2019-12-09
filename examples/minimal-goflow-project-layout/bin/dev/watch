@@ -1,1 +1,1 @@
-/bin/bash ./goflow/scripts/dev/watch
+/bin/bash ./goflow/scripts/dev/watch "$@"
