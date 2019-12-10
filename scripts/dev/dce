@@ -7,4 +7,4 @@ if [ $# -eq 0 ]
     cli_args="app bash"
 fi
 
-docker-compose -f ./goflow/build/dev/docker-compose.yml exec "$cli_args"
+docker-compose -f ./goflow/build/dev/docker-compose.yml exec $cli_args
